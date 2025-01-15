@@ -1,5 +1,5 @@
 import "./Status.css";
-import { Dem1, Dem2, Dem3,Dem4 } from "./assets";
+import { Dem1, Dem2, Dem3,Dem4 } from "./assets/imagens";
 
 const STATUS = new Map([
     ["Demonee-ho",Dem1],
