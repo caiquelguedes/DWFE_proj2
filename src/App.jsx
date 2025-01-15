@@ -1,12 +1,12 @@
 import './App.css'
 import Status from "./Status";
-import
-function App() {
+
+export default function App() {
   return (
   <>
-   <Status/> 
+   <Status /> 
   </>
-  );
+  )
 }
 
-export default App
+
