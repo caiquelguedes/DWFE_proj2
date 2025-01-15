@@ -1,0 +1,17 @@
+.imagem{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+}
+
+.imagem img{
+    width: 100px;
+    height: auto;
+}
+
+.Atributo{
+    color: black;
+    font-size: 18px;
+    margin-top: 10px;
+}

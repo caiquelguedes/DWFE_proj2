@@ -7,12 +7,17 @@ const STATUS = new Map([
     ["Cherub", Dem3],
     ["Slenderman", Dem4],
 
-])
+]);
 
 export default function Status(){
+    const name = "Demonee-ho";
+
+    const imageSrc = STATUS.get(Dem1);
+
     return (
         <div className="imagem">
-          <div className="STATUS">{STATUS}</div>
+            <img src={imageSrc} alt={name}></img>
+          <div className="Atributo">{Dem1}</div>
         </div>
       );
 }
