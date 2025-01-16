@@ -1,6 +1,5 @@
 import "./Status.css";
-import { Dem1, Dem2, Dem3,Dem4 } from "./assets/imagens";
-
+import {  Dem1,Dem2, Dem3,Dem4 } from "./assets/imagens/index";
 const STATUS = new Map([
     ["Demonee-ho",Dem1],
     ["Parvati", Dem2],
@@ -9,15 +8,16 @@ const STATUS = new Map([
 
 ]);
 
+
 export default function Status(){
     const name = "Demonee-ho";
 
-    const imageSrc = STATUS.get(Dem1);
+    const imageSrc = STATUS.get(name);
 
     return (
         <div className="imagem">
             <img src={imageSrc} alt={name}></img>
-          <div className="Atributo">{Dem1}</div>
+          <div className="Atributo">{name}</div>
         </div>
       );
 }
