@@ -18,6 +18,8 @@ export default function Status(){
         <div className="imagem">
             <img src={imageSrc} alt={name}></img>
           <div className="Atributo">{name}</div>
+          <button> + </button>
+          <button> - </button>
         </div>
       );
 }
