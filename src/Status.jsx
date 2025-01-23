@@ -1,25 +1,38 @@
-import "./Status.css";
-import {  Dem1,Dem2, Dem3,Dem4 } from "./assets/imagens/index";
-const STATUS = new Map([
-    ["Demonee-ho",Dem1],
-    ["Parvati", Dem2],
-    ["Cherub", Dem3],
-    ["Slenderman", Dem4],
+import React, { useState } from "react";
+import Forcas from "./Forcas";
+import { Dem1, Dem2, Dem3, Dem4 } from "../assets/imagens/index";
 
-]);
+const DEMONS = [
+  {
+    name: "Demonee-ho",
+    image: Dem1,
+    strengths: ["Fogo"],
+    weaknesses: ["Gelo"],
+  },
+  {
+    name: "Parvati",
+    image: Dem2,
+    strengths: ["Luz"],
+    weaknesses: ["Escuridão"],
+  },
+  {
+    name: "Cherub",
+    image: Dem3,
+    strengths: ["Raio"],
+    weaknesses: ["Vento"],
+  },
+  {
+    name: "Slenderman",
+    image: Dem4,
+    strengths: ["Tiro"],
+    weaknesses: ["Físico"],
+  },
+];
 
+export default function Status() {
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-export default function Status(){
-    const name = "Demonee-ho";
+  const currentDemon = DEMONS[currentIndex];
 
-    const imageSrc = STATUS.get(name);
-
-    return (
-        <div className="imagem">
-            <img src={imageSrc} alt={name}></img>
-          <div className="Atributo">{name}</div>
-          <button> + </button>
-          <button> - </button>
-        </div>
-      );
+  );
 }
