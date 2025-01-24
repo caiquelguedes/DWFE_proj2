@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Forcas from "../../Forcas.jsx";
+import Forcas from "../Forcas/Forcas.jsx";
 import "./Status.css";
 import { Dem1, Dem2, Dem3, Dem4 } from "../../assets/imagens/index";
 
@@ -7,8 +7,8 @@ const DEMONS = [
   {
     name: "Demonee-ho",
     image: Dem1,
-    strengths: ["Fogo"],
-    weaknesses: ["Gelo"],
+    strengths: ["Fisico", "tiro", "fogo"],
+    weaknesses: [" "],
   },
   {
     name: "Parvati",
@@ -51,12 +51,12 @@ export default function Status() {
         <img src={currentDemon.image} alt={currentDemon.name} />
         <h2>{currentDemon.name}</h2>
       </div>
-      {/* <Forcas
+      <Forcas
         strengths={currentDemon.strengths}
         weaknesses={currentDemon.weaknesses}
         onNext={handleNext}
         onPrevious={handlePrevious}
-      /> */}
+      /> 
     </div>
   );
 }
