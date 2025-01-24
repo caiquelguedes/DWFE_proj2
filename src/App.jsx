@@ -1,11 +1,11 @@
 import './App.css'
-import Status from "./Status";
-import Forcas from "./Forcas";
+import Status from "./components/Status/Status";
+
 export default function App() {
   return (
   <>
    <Status /> 
-   <Forcas/>
+   
   </>
   )
 }

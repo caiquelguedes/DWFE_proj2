@@ -1,0 +1,11 @@
+.status{
+    height: auto;
+    display: flex;
+    img{
+       
+        width: 250px; 
+    }
+    demon-container{
+        background: yellow;
+    }
+ }

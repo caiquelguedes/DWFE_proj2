@@ -1,29 +1,47 @@
+import React from "react";
 import "./Forcas.css";
-import {fisico, tiro, raio, luz, gelo, fogo, escuridao, vento  } from "./assets/imagens/index";
 
-const STATUS = new Map([
-    [Dem1, "-"],
-    [Dem2, "-"],
-    [Dem3, "-"],
-    [Dem4, "-"],
-    [Dem5, "-"],
-    [Dem6, "-"],
-    [Dem7, "-"],
-    [Dem8, "-"],
-
-]);
-
-export default function Status(){
-    const name = "Demonee-ho";
-
-    const imageSrc = STATUS.get(name);
-
-    return (
-        <div className="imagem">
-            <img src={imageSrc} alt={name}></img>
-          <div className="Atributo">{name}</div>
-          <button> + </button>
-          <button> - </button>
+export default function Forcas({ strengths, weaknesses, onNext, onPrevious }) {
+  return (
+    <div className="atributos">
+      <div className="strengths">
+        <h3>Forças:</h3>
+        <div className="elements">
+          {strengths.map((strength) => (
+            <button
+              key={strength}
+              onClick={onNext}
+              className="element-button"
+              title={`Próximo (Força: ${strength})`}
+            >
+              <img
+                src={strength}
+                alt={strength}
+                className="element-icon"
+              />
+            </button>
+          ))}
         </div>
-      );
+      </div>
+      <div className="weaknesses">
+        <h3>Fraquezas:</h3>
+        <div className="elements">
+          {weaknesses.map((weakness) => (
+            <button
+              key={weakness}
+              onClick={onPrevious}
+              className="element-button"
+              title={`Anterior (Fraqueza: ${weakness})`}
+            >
+              <img
+                src={weakness}
+                alt={weakness}
+                className="element-icon"
+              />
+            </button>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 }
