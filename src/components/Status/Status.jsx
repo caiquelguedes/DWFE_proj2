@@ -35,11 +35,11 @@ export default function Status() {
 
   const currentDemon = DEMONS[currentIndex];
 
-  const handleNext = () => {
+  const PassarProximo = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % DEMONS.length);
   };
 
-  const handlePrevious = () => {
+  const PassarAnterior = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? DEMONS.length - 1 : prevIndex - 1
     );
@@ -54,8 +54,8 @@ export default function Status() {
       <Forcas
         strengths={currentDemon.strengths}
         weaknesses={currentDemon.weaknesses}
-        onNext={handleNext}
-        onPrevious={handlePrevious}
+        onNext={PassarProximo}
+        onPrevious={PassarAnterior}
       /> 
     </div>
   );

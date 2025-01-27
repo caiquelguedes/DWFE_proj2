@@ -1,7 +1,7 @@
 import React from "react";
 import "./Forcas.css";
 
-export default function Forcas({ strengths, weaknesses}) {
+export default function Forcas({ strengths, weaknesses, onNext, onPrevious}) {
   return (
     <div className="atributos">
       <div className="strengths">
@@ -28,8 +28,8 @@ export default function Forcas({ strengths, weaknesses}) {
           ))}
         </div>
       </div>
-      <button>-</button>
-      <button>+</button>
+      <button onClick={onPrevious}>Anterior</button>
+      <button onClick={onNext}>Próximo</button>
     </div>
   );
 }
