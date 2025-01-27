@@ -7,26 +7,26 @@ const DEMONS = [
   {
     name: "Demonee-ho",
     image: Dem1,
-    strengths: ["Fisico", "tiro", "fogo"],
+    strengths: ["Físico", "Tiro", "Fogo"],
     weaknesses: [" "],
   },
   {
     name: "Parvati",
     image: Dem2,
     strengths: ["Luz"],
-    weaknesses: ["Escuridão"],
+    weaknesses: [" "],
   },
   {
-    name: "Cherub",
+    name: "Seraph",
     image: Dem3,
-    strengths: ["Raio"],
+    strengths: ["Escuridão", "Luz", "Fogo", "Tiro", "Físico"],
     weaknesses: ["Vento"],
   },
   {
     name: "Slenderman",
     image: Dem4,
-    strengths: ["Tiro"],
-    weaknesses: ["Físico"],
+    strengths: ["escuridão"],
+    weaknesses: ["tiro"],
   },
 ];
 
