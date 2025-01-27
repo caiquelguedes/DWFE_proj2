@@ -28,6 +28,8 @@ export default function Forcas({ strengths, weaknesses}) {
           ))}
         </div>
       </div>
+      <button>-</button>
+      <button>+</button>
     </div>
   );
 }
